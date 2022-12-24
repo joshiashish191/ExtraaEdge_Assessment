@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RocketDetailsFragment"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/rocket_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Falcon 1" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rocket_images_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/rocket_name"
+        tools:listitem="@layout/rocket_image_list_item"
+        android:scrollbars="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/active"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/rocket_images_recyclerview"
+        tools:text="Status: Active"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/cost_per_launch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/active"
+        tools:text="Cost Per Launch: 6700000"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/success_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Success rate: 40%"
+        app:layout_constraintTop_toBottomOf="@+id/cost_per_launch"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Description: The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth."
+        app:layout_constraintTop_toBottomOf="@+id/success_rate"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/wiki_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wikipedia Link: https://en.wikipedia.org/wiki/Falcon_1"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        tools:layout_editor_absoluteX="210dp"
+        android:linksClickable="true"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Height: 73 feet"
+        app:layout_constraintTop_toBottomOf="@+id/wiki_link"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/diameter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diameter: 5.5 feet"
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

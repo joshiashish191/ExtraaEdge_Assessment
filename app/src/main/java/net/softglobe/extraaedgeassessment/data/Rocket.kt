@@ -1,0 +1,28 @@
+package net.softglobe.extraaedgeassessment.data
+
+data class Rocket(
+    val active: Boolean,
+    val cost_per_launch: Int,
+    val country: String,
+    val description: String,
+    val diameter: Diameter,
+    val engines: Engines,
+    val flickr_images: List<String>,
+    val height: Height,
+    val id: String,
+    val name: String,
+    val success_rate_pct: Int,
+    val wikipedia: String
+)
+
+data class Height(
+    val feet: Double
+)
+
+data class Engines(
+    val number: Int
+)
+
+data class Diameter(
+    val feet: Double
+)

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigate"
+    app:startDestination="@id/rocketsListFragment">
+
+    <fragment
+        android:id="@+id/rocketsListFragment"
+        android:name="net.softglobe.extraaedgeassessment.view.RocketsListFragment"
+        android:label="fragment_rockets_list"
+        tools:layout="@layout/fragment_rockets_list" >
+        <action
+            android:id="@+id/action_rocketsListFragment_to_rocketDetailsFragment"
+            app:destination="@id/rocketDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rocketDetailsFragment"
+        android:name="net.softglobe.extraaedgeassessment.view.RocketDetailsFragment"
+        android:label="fragment_rocket_details"
+        tools:layout="@layout/fragment_rocket_details" />
+</navigation>
